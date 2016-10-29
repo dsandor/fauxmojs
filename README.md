@@ -3,10 +3,15 @@ Fake WeMo device ported to NodeJS.  Allows Alexa to make api calls.
 
 Based on the work of [makermusings](https://github.com/makermusings/fauxmo) and [n8henrie](https://github.com/n8henrie/fauxmo) but written from scratch for NodeJS.
 
+
 ## What does it do?
 This service will setup the required UDP listener and HTTP listeners that support the SSDP that Amazon Echo (Alexa) uses in order to discover Belkin WeMo smart switches.
 
 With this module you can hook up your own NodeJS code to run in response to an Alexa command such as:  "Alexa, turn office light on".  In this statement `office light` is the device name and `on` is the action.
+
+## Install
+
+`npm install fauxmojs`
 
 ## How do I use it?
 
