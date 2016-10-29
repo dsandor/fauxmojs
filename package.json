@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/dsandor/fauxmojs#readme",
   "dependencies": {
+    "aguid": "^1.0.4",
     "async": "^2.1.2",
     "boom": "^4.2.0",
     "debug": "^2.2.0",
