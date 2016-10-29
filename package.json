@@ -1,0 +1,39 @@
+{
+  "name": "fauxmojs",
+  "version": "0.0.1",
+  "description": "Fake WeMo device ported to NodeJS. Allows Alexa to make api calls.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsandor/fauxmojs.git"
+  },
+  "keywords": [
+    "alexa",
+    "nodejs",
+    "node",
+    "javascript",
+    "wemo",
+    "fauxmo",
+    "fauxmojs",
+    "iot",
+    "raspberry",
+    "pi"
+  ],
+  "author": "David Sandor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsandor/fauxmojs/issues"
+  },
+  "homepage": "https://github.com/dsandor/fauxmojs#readme",
+  "dependencies": {
+    "async": "^2.1.2",
+    "boom": "^4.2.0",
+    "debug": "^2.2.0",
+    "hapi": "^15.2.0",
+    "lodash": "^4.16.4",
+    "uuid": "^2.0.3"
+  }
+}
