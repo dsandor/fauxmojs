@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dsandor/fauxmojs.svg?branch=master)](https://travis-ci.org/dsandor/fauxmojs)
 # fauxmojs
 Fake WeMo device ported to NodeJS.  Allows Alexa to make api calls.
 
