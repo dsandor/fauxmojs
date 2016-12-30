@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/dsandor/fauxmojs.svg?branch=master)](https://travis-ci.org/dsandor/fauxmojs)
-[![Depencencies](https://david-dm.org/dsandor/fauxmojs.svg)](https://david-dm.org/dsandor/fauxmojs.svg)
 [![npm version](https://badge.fury.io/js/fauxmojs.svg)](https://badge.fury.io/js/fauxmojs)
 
 # fauxmojs
