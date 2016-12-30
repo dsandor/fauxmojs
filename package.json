@@ -30,12 +30,12 @@
   "homepage": "https://github.com/dsandor/fauxmojs#readme",
   "dependencies": {
     "aguid": "^1.0.4",
-    "async": "^2.1.2",
+    "async": "^2.1.4",
     "boom": "^4.2.0",
-    "debug": "^2.2.0",
-    "hapi": "^15.2.0",
-    "lodash": "^4.16.4",
-    "uuid": "^2.0.3"
+    "debug": "^2.6.0",
+    "hapi": "^16.1.0",
+    "lodash": "^4.17.3",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
