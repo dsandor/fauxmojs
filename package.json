@@ -1,6 +1,6 @@
 {
   "name": "fauxmojs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Fake WeMo device ported to NodeJS. Allows Alexa to make api calls.",
   "main": "lib/index.js",
   "scripts": {
