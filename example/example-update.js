@@ -2,8 +2,7 @@
 
 const FauxMo = require('../lib');
 
-const devices = {
-  devices: [
+const devices = [
     {
       name: 'office light',
       port: 11000,
@@ -18,8 +17,7 @@ const devices = {
         console.log('office fan action:', action);
       }
     }
-  ]
-};
+  ];
 
 let fauxMo = new FauxMo();
 console.log('started..');
@@ -27,6 +25,6 @@ console.log('started..');
 fauxMo.updateDevices(devices);
 console.log('updated..');
 
-fauxMo.stopServer();
-fauxMo.stopServer(100);
-console.log('stop..');
+setInterval(() => {
+  console.log('jo');
+}, 1000);
