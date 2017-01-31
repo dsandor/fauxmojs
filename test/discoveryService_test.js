@@ -6,6 +6,10 @@ const q = require('q');
 
 describe('lib/discoveryService.js', function() {
 
+  beforeEach(function() {
+    return discoveryService.stopDiscoveryServer();
+  });
+
   it('should start/stop discoveryService', function(done) {
     const state = {
       ipAddress: '127.0.0.1',
