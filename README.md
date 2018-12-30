@@ -44,6 +44,15 @@ let fauxMo = new FauxMo(
         handler: (action) => {
           console.log('office fan action:', action);
         }
+      },
+        {
+        name: 'kitchen light',
+        port: 11002,
+        handler: (action, name, callback) => {
+          console.log('kitchen light action:', action);
+          let status = action === 'on' ? true : false;
+          callback(status);
+        }
       }
     ]
   });
@@ -62,4 +71,4 @@ The device object needs the following properties:
 
 `port` - each fake device needs to have a unique port.  The amazon echo does not send back the device id in the action requests so the device is determined by the port number.  FauxMo listens for actions on each device port.
 
-`handler` - a function that will be called when the echo is attempting to perform the action.  This function takes an 'action' parameter which, when called, will be `on` or `off`.
+`handler` - a function that will be called when the echo is attempting to perform the action.  This functions first parameter 'action' which, when called, will be `on` or `off` or `status`. The second parameter is the device name e.g `office light`. The third parameter is a callback function that responds to Alexa with the device status `true` or `false`.
