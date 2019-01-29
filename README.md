@@ -43,6 +43,11 @@ let fauxMo = new FauxMo(
         port: 11001,
         handler: (action) => {
           console.log('office fan action:', action);
+        },
+        getStateHandler: (device) => {
+          // Return 1 (on), off (0), or undefined to return 
+          // the last known device state.
+          return 1; // Always on.
         }
       }
     ]
@@ -63,3 +68,5 @@ The device object needs the following properties:
 `port` - each fake device needs to have a unique port.  The amazon echo does not send back the device id in the action requests so the device is determined by the port number.  FauxMo listens for actions on each device port.
 
 `handler` - a function that will be called when the echo is attempting to perform the action.  This function takes an 'action' parameter which, when called, will be `on` or `off`.
+
+`getStateHandler` - an optional function that will be called when the echo is asking for the state of the device.  This function takes an 'device' parameter which will contain the `device.id`, `device.name` and `device.port` of the queried device.  The return value is expected to be `1` if the device is on, `0` if it's off, or `undefined` if the last remembered state should be used.
