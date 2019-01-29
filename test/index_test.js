@@ -17,6 +17,8 @@ describe('fauxmo', () => {
       ]
     };
     const fauxmo = new FauxMo(options);
+    const devicesCount = fauxmo.getNumberOfRegisteredDevices();
+    expect(devicesCount).to.equal(1);
     expect(fauxmo).to.be.defined;
   });
 
@@ -34,6 +36,12 @@ describe('fauxmo', () => {
     };
     const fauxmo = new FauxMo(options);
     fauxmo.updateDevices();
+  });
+
+  it('updateDevices should init without parameter', () => {
+    const fauxmo = new FauxMo();
+    const result = Object.keys(fauxmo.devices);
+    expect(result).to.deep.equal([]);
   });
 
   it('updateDevices should update devices', () => {
