@@ -45,8 +45,9 @@ let fauxMo = new FauxMo(
           console.log('office fan action:', action);
         },
         getStateHandler: (device) => {
-          // Return 1 (on), off (0), or undefined to return 
-          // the last known device state.
+          // For "on" return: true / 1 / 'on'
+          // For "off" return: false / 0 / 'off'
+          // For the last known state of the device, return nothing or undefined.
           return 1; // Always on.
         }
       }
@@ -69,4 +70,4 @@ The device object needs the following properties:
 
 `handler` - a function that will be called when the echo is attempting to perform the action.  This function takes an 'action' parameter which, when called, will be `on` or `off`.
 
-`getStateHandler` - an optional function that will be called when the echo is asking for the state of the device.  This function takes an 'device' parameter which will contain the `device.id`, `device.name` and `device.port` of the queried device.  The return value is expected to be `1` if the device is on, `0` if it's off, or `undefined` if the last remembered state should be used.
+`getStateHandler` - an optional function that will be called when the echo is asking for the state of the device. This function takes an 'device' parameter which will contain the `device.id`, `device.name` and `device.port` of the queried device. The return value is expected to be `true`, `1` or `'on'` if the device is on, `false`, `0` or `'off'` if it's off, or `undefined` if the last known device state should be used.
